@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-.PHONY: build clean test run docker
+.PHONY: build clean test run docker docker-push docker-arm64
 
 GO=CGO_ENABLED=0 GO111MODULE=on go
 GOCGO=CGO_ENABLED=1 GO111MODULE=on go
@@ -45,4 +45,10 @@ run:
 docker: $(DOCKERS)
 
 docker_edgex_ui_go:
-	docker build --label "git_sha=$(GIT_SHA)" -t edgexfoundry/docker-edgex-ui-go:$(VERSION) .
+	docker build --label "git_sha=$(GIT_SHA)" -t phanvanhai/docker-config-ui-go:$(VERSION) .
+
+docker-push:
+	docker push phanvanhai/docker-config-ui-go:$(VERSION)
+
+docker-arm64:
+	docker buildx build --platform linux/arm64 -t phanvanhai/docker-config-ui-go-arm64:$(VERSION) --push .

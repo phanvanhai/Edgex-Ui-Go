@@ -1,8 +1,8 @@
 package developMemory
 
 const (
-	developName = "develop"
-	developPass = "develop"
+	developName = "admin"
+	developPass = "admin"
 )
 
 var BasicDevelop Develop

@@ -1,15 +1,15 @@
 $(document).ready(function() {
     debugger
 })
-orgEdgexFoundry.userZigbeeService = (function(){
+orgEdgexFoundry.userZigbeeService = (function() {
     "use strict";
 
-    function UserZigbeeService(){
-        this.ZigbeeService = 'device-zigbee'
+    function UserZigbeeService() {
+        this.ZigbeeService = 'device_zigbee'
     }
 
     UserZigbeeService.prototype = {
-        constructor:UserZigbeeService,
+        constructor: UserZigbeeService,
         restartService: null,
         getConfig: null,
         putConfig: null,
@@ -31,7 +31,7 @@ orgEdgexFoundry.userZigbeeService = (function(){
             data: JSON.stringify({
                 "Driver": {
                     "NetworkType": NetworkType,
-                    "NetWorkRequestTimeout": RequestTimeout, 
+                    "NetworkRequestTimeout": RequestTimeout,
                     "NetworkCommandResponseTimeout": CommandResponseTimeout,
                     "NetworkAddObjectResponseTimeout": ObjectResponseTimeout
                 }
@@ -60,7 +60,7 @@ orgEdgexFoundry.userZigbeeService = (function(){
 
     UserZigbeeService.prototype.renderConfig = function(dt) {
         document.getElementById("network-type").value = dt.NetworkType
-        document.getElementById("request-timeout").value = dt.NetWorkRequestTimeout
+        document.getElementById("request-timeout").value = dt.NetworkRequestTimeout
         document.getElementById("command-response-timeout").value = dt.NetworkCommandResponseTimeout
         document.getElementById("object-response-timeout").value = dt.NetworkAddObjectResponseTimeout
     }
@@ -71,15 +71,15 @@ orgEdgexFoundry.userZigbeeService = (function(){
             type: 'POST',
             contentType: 'application/json',
             data: JSON.stringify({
-                "action":"restart",
-                "services":[userZigbee.ZigbeeService]
+                "action": "restart",
+                "services": [userZigbee.ZigbeeService]
             }),
             success: function(data) {
                 let dt = JSON.parse(data)
 
-                if(dt[0].Success){
+                if (dt[0].Success) {
                     alert("Restart zigbee service successfully")
-                }else {
+                } else {
                     alert("fail to restart zigbee service, please try again")
                 }
             },

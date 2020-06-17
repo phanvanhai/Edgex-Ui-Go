@@ -1,8 +1,8 @@
 package userMemory
 
 const (
-	UserName = "user"
-	UserPass = "user"
+	UserName = "operator"
+	UserPass = "operator"
 )
 
 var BasicUser User
