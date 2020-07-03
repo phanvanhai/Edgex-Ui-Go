@@ -3,8 +3,8 @@ package internal
 import (
 	"net/http"
 
-	"githup.com/tuanldchainos/Edgex-Ui-Go/internal/core"
-	"githup.com/tuanldchainos/Edgex-Ui-Go/internal/handler"
+	"githup.com/phanvanhai/Edgex-Ui-Go/internal/core"
+	"githup.com/phanvanhai/Edgex-Ui-Go/internal/handler"
 
 	"github.com/gorilla/mux"
 )
