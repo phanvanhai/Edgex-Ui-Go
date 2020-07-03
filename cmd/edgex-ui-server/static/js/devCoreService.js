@@ -7,7 +7,7 @@ orgEdgexFoundry.coreService = (function() {
     "use strict";
 
     function CoreService() {
-        this.allCoreServices = ["edgex-core-metadata", 'edgex-core-data', 'edgex-core-command', 'edgex-support-logging', 'edgex-support-notifications', 'edgex-support-scheduler', 'edgex-sys-mgmt-agent']
+        this.allCoreServices = ["edgex-core-metadata", 'edgex-core-data', 'edgex-core-command', 'edgex-support-logging', 'edgex-support-notifications', 'edgex-support-scheduler']
     }
 
     CoreService.prototype = {
