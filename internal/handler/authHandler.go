@@ -6,10 +6,10 @@ import (
 	"log"
 	"net/http"
 
-	"githup.com/phanvanhai/Edgex-Ui-Go/internal/core"
-	"githup.com/phanvanhai/Edgex-Ui-Go/internal/domain"
-	"githup.com/phanvanhai/Edgex-Ui-Go/internal/memory/developMemory"
-	"githup.com/phanvanhai/Edgex-Ui-Go/internal/memory/userMemory"
+	"github.com/phanvanhai/Edgex-Ui-Go/internal/core"
+	"github.com/phanvanhai/Edgex-Ui-Go/internal/domain"
+	"github.com/phanvanhai/Edgex-Ui-Go/internal/memory/developMemory"
+	"github.com/phanvanhai/Edgex-Ui-Go/internal/memory/userMemory"
 )
 
 func DevHomepageHandler(w http.ResponseWriter, r *http.Request) {

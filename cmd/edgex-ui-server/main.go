@@ -7,13 +7,13 @@ import (
 	"strconv"
 	"time"
 
-	internal "githup.com/tuanldchainos/Edgex-Ui-Go/internal"
-	"githup.com/tuanldchainos/Edgex-Ui-Go/internal/configs"
-	"githup.com/tuanldchainos/Edgex-Ui-Go/internal/core"
-	"githup.com/tuanldchainos/Edgex-Ui-Go/internal/helper"
-	"githup.com/tuanldchainos/Edgex-Ui-Go/internal/memory/developMemory"
-	"githup.com/tuanldchainos/Edgex-Ui-Go/internal/memory/userMemory"
-	"githup.com/tuanldchainos/Edgex-Ui-Go/internal/pkg/usage"
+	internal "github.com/phanvanhai/Edgex-Ui-Go/internal"
+	"github.com/phanvanhai/Edgex-Ui-Go/internal/configs"
+	"github.com/phanvanhai/Edgex-Ui-Go/internal/core"
+	"github.com/phanvanhai/Edgex-Ui-Go/internal/helper"
+	"github.com/phanvanhai/Edgex-Ui-Go/internal/memory/developMemory"
+	"github.com/phanvanhai/Edgex-Ui-Go/internal/memory/userMemory"
+	"github.com/phanvanhai/Edgex-Ui-Go/internal/pkg/usage"
 )
 
 func main() {

@@ -5,8 +5,8 @@ import (
 	"net/http/httputil"
 	"net/url"
 
-	"githup.com/phanvanhai/Edgex-Ui-Go/internal/configs"
-	"githup.com/phanvanhai/Edgex-Ui-Go/internal/helper"
+	"github.com/phanvanhai/Edgex-Ui-Go/internal/configs"
+	"github.com/phanvanhai/Edgex-Ui-Go/internal/helper"
 )
 
 const (

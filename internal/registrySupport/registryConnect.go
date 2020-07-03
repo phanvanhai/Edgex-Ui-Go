@@ -3,7 +3,7 @@ package registrySupport
 import (
 	"fmt"
 
-	"githup.com/phanvanhai/Edgex-Ui-Go/internal/configs"
+	"github.com/phanvanhai/Edgex-Ui-Go/internal/configs"
 
 	"github.com/edgexfoundry/go-mod-registry/pkg/types"
 	"github.com/edgexfoundry/go-mod-registry/registry"

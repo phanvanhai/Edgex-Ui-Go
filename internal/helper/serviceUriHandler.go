@@ -4,8 +4,8 @@ import (
 	"sync"
 	"time"
 
-	"githup.com/phanvanhai/Edgex-Ui-Go/internal/configs"
-	"githup.com/phanvanhai/Edgex-Ui-Go/internal/registrySupport"
+	"github.com/phanvanhai/Edgex-Ui-Go/internal/configs"
+	"github.com/phanvanhai/Edgex-Ui-Go/internal/registrySupport"
 )
 
 var (

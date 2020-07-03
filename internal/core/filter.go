@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"strings"
 
-	"githup.com/phanvanhai/Edgex-Ui-Go/internal/configs"
-	"githup.com/phanvanhai/Edgex-Ui-Go/internal/proxy"
+	"github.com/phanvanhai/Edgex-Ui-Go/internal/configs"
+	"github.com/phanvanhai/Edgex-Ui-Go/internal/proxy"
 
 	"github.com/gorilla/sessions"
 )

@@ -7,10 +7,10 @@ import (
 	"log"
 	"net/http"
 
-	"githup.com/phanvanhai/Edgex-Ui-Go/internal/configs"
-	"githup.com/phanvanhai/Edgex-Ui-Go/internal/registrySupport"
+	"github.com/phanvanhai/Edgex-Ui-Go/internal/configs"
+	"github.com/phanvanhai/Edgex-Ui-Go/internal/registrySupport"
 
-	"githup.com/phanvanhai/Edgex-Ui-Go/internal/core"
+	"github.com/phanvanhai/Edgex-Ui-Go/internal/core"
 
 	"github.com/edgexfoundry/go-mod-core-contracts/clients"
 	"github.com/pelletier/go-toml"
