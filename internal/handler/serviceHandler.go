@@ -152,6 +152,7 @@ func PutDevServiceConfig(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "InternalServerError", http.StatusInternalServerError)
 		return
 	}
+
 	w.Write([]byte("update device service config successfully"))
 }
 
