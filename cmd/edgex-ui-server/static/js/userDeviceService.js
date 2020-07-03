@@ -66,21 +66,21 @@ orgEdgexFoundry.userZigbeeService = (function() {
     }
 
     UserZigbeeService.prototype.restartService = function() {
+        console.log("restart:" + userZigbee.ZigbeeService);
         $.ajax({
             url: '/api/v1/user/restart/service',
             type: 'POST',
             contentType: 'application/json',
+            dataType: 'json',
             data: JSON.stringify({
                 "action": "restart",
                 "services": [userZigbee.ZigbeeService]
             }),
             success: function(data) {
-                let dt = JSON.parse(data)
-
-                if (dt[0].Success) {
-                    alert("Restart zigbee service successfully")
+                if (data[0].Success) {
+                    alert("Restart device service successfully")
                 } else {
-                    alert("fail to restart zigbee service, please try again")
+                    alert("fail to restart device service, please try again")
                 }
             },
             error: function() {

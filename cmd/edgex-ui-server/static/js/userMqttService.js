@@ -1,15 +1,15 @@
 $(document).ready(function() {
     debugger
 })
-orgEdgexFoundry.userMqtt = (function(){
+orgEdgexFoundry.userMqtt = (function() {
     "use strict";
 
-    function UserMqtt(){
+    function UserMqtt() {
         this.Mqtt = 'mqtt-proxy'
     }
 
     UserMqtt.prototype = {
-        constructor:UserMqtt,
+        constructor: UserMqtt,
         restartMqtt: null,
         connectMqtt: null,
         getConfig: null,
@@ -85,20 +85,22 @@ orgEdgexFoundry.userMqtt = (function(){
     }
 
     UserMqtt.prototype.restartMqtt = function() {
+        console.log("restart:" + userMqttService.Mqtt);
         $.ajax({
             url: '/api/v1/user/restart/service',
             type: 'POST',
             contentType: 'application/json',
+            dataType: 'json',
             data: JSON.stringify({
-                "action":"restart",
-                "services":[userMqttService.Mqtt]
+                "action": "restart",
+                "services": [userMqttService.Mqtt]
             }),
             success: function(data) {
-                let dt = JSON.parse(data)
-                if(dt[0].Success){
-                    alert("Restart mqtt service successfully")
-                }else {
-                    alert("fail to restart mqtt service, please try again")
+                console.log(data);
+                if (data[0].Success) {
+                    alert("Restart device service successfully")
+                } else {
+                    alert("fail to restart device service, please try again")
                 }
             },
             error: function() {
@@ -110,14 +112,14 @@ orgEdgexFoundry.userMqtt = (function(){
     UserMqtt.prototype.getConfig = function() {
         $.ajax({
             // url:'/edgex-sys-mgmt-agent' + '/api/v1/config/' + appService,
-            url:'/api/v1/user/appservice/list',
-            type:'GET',
-            success: function(data){
+            url: '/api/v1/user/appservice/list',
+            type: 'GET',
+            success: function(data) {
                 var dt = data[userMqttService.Mqtt]
                 userMqttService.renderConfig(dt)
                 alert("Get current mqtt config successfully")
             }
-        }) 
+        })
     }
 
     UserMqtt.prototype.renderConfig = function(dt) {
